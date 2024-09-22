@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-item [routerLink]="['home']" button>
+            Home
+          </ion-item>
+          <ion-item [routerLink]="['in-game']" button>
+            InGame
+          </ion-item>
+          <ion-item [routerLink]="['upload-assets']" button>
+            Upload Assets
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-router-outlet></ion-router-outlet>
+    </div>
+  </ion-split-pane>
+</ion-app>

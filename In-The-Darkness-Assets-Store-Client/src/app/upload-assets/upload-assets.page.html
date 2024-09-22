@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Upload Assets</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div id="container">
+    <div>
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="uploadAssets()">
+          <ion-icon name="image-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+    <div id="imageContainer">
+      <img [src]="imageURL">
+    </div>
+  </div>
+</ion-content>

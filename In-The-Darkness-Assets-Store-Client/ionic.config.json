@@ -1,0 +1,7 @@
+{
+  "name": "In-The-Darkness-Assets-Store",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

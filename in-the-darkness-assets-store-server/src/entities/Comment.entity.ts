@@ -1,6 +1,6 @@
 import { Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Skin } from "./Skin";
-import { User } from "./User";
+import { Skin } from "./Skin.entity";
+import { User } from "./User.entity";
 
 @Entity()
 export class Comment{

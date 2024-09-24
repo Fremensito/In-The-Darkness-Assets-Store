@@ -1,30 +1,30 @@
 import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
-import { Skin } from "./Skin";
+import { Skin } from "./Skin.entity";
 
 @Entity()
 export class Character{
     @PrimaryColumn()
     characterClass:string
 
-    @Column()
+    @Column({type: "bytea"})
     icon: Buffer
     
-    @Column()
+    @Column({type: "bytea"})
     defaultIdle: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     defaultWalk: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     defaultWeaponIdle:Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     defaultWeaponWalk: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     defaultQ:Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     defaultW: Buffer
 
     @OneToMany(()=>Skin, (skin)=>skin.character)

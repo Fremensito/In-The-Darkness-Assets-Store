@@ -1,8 +1,8 @@
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { Character } from "./Character";
-import { User } from "./User";
-import { SkinPhoto } from "./SkinPhoto";
-import { Comment } from "./Comment";
+import { Character } from "./Character.entity";
+import { User } from "./User.entity";
+import { SkinPhoto } from "./SkinPhoto.entity";
+import { Comment } from "./Comment.entity";
 
 @Entity()
 export class Skin{
@@ -25,22 +25,22 @@ export class Skin{
     @OneToMany(()=>SkinPhoto, (photo) => photo.skin)
     photos: SkinPhoto[]
 
-    @Column()
+    @Column({type: "bytea"})
     idle: Buffer
     
-    @Column()
+    @Column({type: "bytea"})
     walk:Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     idleWeapon: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     walkWeapon: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     q: Buffer
 
-    @Column()
+    @Column({type: "bytea"})
     w: Buffer
 
     @OneToMany(()=>Comment, (comment)=>comment.skin)

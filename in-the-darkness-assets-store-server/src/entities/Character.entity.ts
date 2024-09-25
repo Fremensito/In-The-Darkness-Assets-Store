@@ -22,7 +22,13 @@ export class Character{
     defaultWeaponWalk: Buffer
 
     @Column({type: "bytea"})
+    qIcon:Buffer
+
+    @Column({type: "bytea"})
     defaultQ:Buffer
+
+    @Column({type: "bytea"})
+    wIcon: Buffer
 
     @Column({type: "bytea"})
     defaultW: Buffer

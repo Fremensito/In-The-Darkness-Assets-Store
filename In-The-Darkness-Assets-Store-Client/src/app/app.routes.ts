@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { adminRoutes } from './admin/admin.routes';
 
 export const routes: Routes = [
   {
@@ -17,5 +18,10 @@ export const routes: Routes = [
   {
     path: 'upload-assets',
     loadComponent: () => import('./upload-assets/upload-assets.page').then( m => m.UploadAssetsPage)
+  },
+  {
+    path: 'admin',
+    children: adminRoutes,
+    loadComponent: () => import('./admin/admin.page').then( m => m.AdminPage)
   },
 ];

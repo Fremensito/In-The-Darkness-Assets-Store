@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonApp, IonRouterOutlet, IonTitle, IonContent, IonToolbar, IonButtons, IonHeader, IonMenu, IonMenuButton, IonSplitPane, IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { add, imageOutline} from 'ionicons/icons';
+import { add, imageOutline, accessibilityOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,6 @@ import { add, imageOutline} from 'ionicons/icons';
 })
 export class AppComponent {
   constructor() {
-    addIcons({add, imageOutline})
+    addIcons({add, imageOutline, accessibilityOutline})
   }
 }

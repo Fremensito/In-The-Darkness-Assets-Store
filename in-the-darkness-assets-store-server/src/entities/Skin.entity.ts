@@ -11,7 +11,7 @@ export class Skin{
     id: number
 
     @ManyToOne(()=>Character, (character)=>character.images)
-    character: string
+    character: Character
 
     @Column()
     name: string
@@ -20,28 +20,22 @@ export class Skin{
     description: string
 
     @ManyToOne(()=>User, (user)=>user.creations)
-    creator: number
+    creator: User
 
     @OneToMany(()=>SkinPhoto, (photo) => photo.skin)
     photos: SkinPhoto[]
 
     @Column({type: "bytea"})
-    idle: Buffer
+    idle: string
     
     @Column({type: "bytea"})
-    walk:Buffer
+    walk:string
 
     @Column({type: "bytea"})
-    idleWeapon: Buffer
+    q: string
 
     @Column({type: "bytea"})
-    walkWeapon: Buffer
-
-    @Column({type: "bytea"})
-    q: Buffer
-
-    @Column({type: "bytea"})
-    w: Buffer
+    w: string
 
     @OneToMany(()=>Comment, (comment)=>comment.skin)
     comments: Comment[]

@@ -24,4 +24,8 @@ export const routes: Routes = [
     children: adminRoutes,
     loadComponent: () => import('./admin/admin.page').then( m => m.AdminPage)
   },
+  {
+    path: 'preview',
+    loadComponent: () => import('./preview/preview.page').then( m => m.PreviewPage)
+  },
 ];

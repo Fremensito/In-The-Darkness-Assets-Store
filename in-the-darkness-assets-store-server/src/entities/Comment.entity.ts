@@ -1,4 +1,4 @@
-import { Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Skin } from "./Skin.entity";
 import { User } from "./User.entity";
 
@@ -8,9 +8,12 @@ export class Comment{
     @PrimaryGeneratedColumn()
     id: number
 
+    @Column()
+    content: string
+
     @ManyToOne(()=>Skin, (skin)=>skin.comments)
-    skin: number
+    skin: Skin
 
     @ManyToOne(()=>User, (user)=>user.comments)
-    user: number
+    user: User
 }

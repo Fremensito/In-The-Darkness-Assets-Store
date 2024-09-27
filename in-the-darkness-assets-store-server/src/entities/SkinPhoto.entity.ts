@@ -7,8 +7,8 @@ export class SkinPhoto{
     id: number;
 
     @Column({type: "bytea"})
-    data: Buffer
+    data: string
 
     @ManyToOne(()=>Skin, (skin)=>skin.photos)
-    skin: number
+    skin: Skin
 }

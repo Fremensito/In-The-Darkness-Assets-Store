@@ -7,31 +7,25 @@ export class Character{
     characterClass:string
 
     @Column({type: "bytea"})
-    icon: Buffer
+    icon: string
     
     @Column({type: "bytea"})
-    defaultIdle: Buffer
+    defaultIdle: string
 
     @Column({type: "bytea"})
-    defaultWalk: Buffer
+    defaultWalk: string
 
     @Column({type: "bytea"})
-    defaultWeaponIdle:Buffer
+    qIcon:string
 
     @Column({type: "bytea"})
-    defaultWeaponWalk: Buffer
+    defaultQ:string
 
     @Column({type: "bytea"})
-    qIcon:Buffer
+    wIcon: string
 
     @Column({type: "bytea"})
-    defaultQ:Buffer
-
-    @Column({type: "bytea"})
-    wIcon: Buffer
-
-    @Column({type: "bytea"})
-    defaultW: Buffer
+    defaultW: string
 
     @OneToMany(()=>Skin, (skin)=>skin.character)
     images: Skin[]
